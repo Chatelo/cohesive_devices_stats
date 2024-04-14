@@ -16,6 +16,13 @@ This script is designed to process and analyze compositions in Microsoft Word (.
 To install and run this script, follow these steps:
 
 1. **Create a virtual environment (optional but recommended):**
+   **Install virtual environment if not available in the user's system:**
+
+   - If you don't have `virtualenv` installed on your system, you can install it using the following command:
+
+   ```
+   pip install virtualenv
+   ```
 
    - If you have Python and `virtualenv` installed on your system, you can create a virtual environment for this project using the following command:
      ```
@@ -36,12 +43,6 @@ To install and run this script, follow these steps:
    - Install the required packages by running the following command in your terminal:
      ```
      pip install -r requirements.txt
-     ```
-
-3. **Install virtual environment if not available in the user's system:**
-   - If you don't have `virtualenv` installed on your system, you can install it using the following command:
-     ```
-     pip install virtualenv
      ```
 
 ## Usage
