@@ -49,23 +49,16 @@ To install and run this script, follow these steps:
 
 To use this script, follow these steps:
 
-1. **Run the script:**
+1. **_Update Path:_**
+
+- Inside the script, update the "path/to/directory", you should provide absolute path e.g. "Desktop/Resources/fodler_containing_files"
+
+2. **Run the script:**
 
    - If you have a virtual environment activated, you can run the script using the following command:
      ```
      python cdv_script.py
      ```
-   - If you don't have a virtual environment activated, you can run the script using the following command:
-     ```
-     python -m cdv_script
-     ```
-
-<!-- 2. **Process all compositions in a directory:**
-
-   - Specify the directory path containing the compositions as a command-line argument:
-     ```
-     python process_all_compositions.py path/to/directory
-     ``` -->
 
 3. **View the results:**
    - The script will print the results for each composition in the specified directory.
