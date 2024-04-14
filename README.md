@@ -71,7 +71,7 @@ To contribute to this project, follow these steps:
 
    - Clone the repository using the following command:
      ```
-     git clone https://github.com/yourusername/yourrepository.git
+     git clone https://github.com/Chatelo/cohesive_devices_stats.git
      ```
 
 2. Create a virtual environment (optional but recommended):
@@ -88,3 +88,6 @@ Contributions to this project are welcome! If you find any issues or have sugges
 
 License
 This project is licensed under the MIT License. See the LICENSE file for more information.
+
+**Python Version:**
+This script has been tested with Python 3.10 and should work with any Python 3.x version.
