@@ -53,19 +53,19 @@ To use this script, follow these steps:
 
    - If you have a virtual environment activated, you can run the script using the following command:
      ```
-     python process_all_compositions.py
+     python cdv_script.py
      ```
    - If you don't have a virtual environment activated, you can run the script using the following command:
      ```
-     python -m process_all_compositions
+     python -m cdv_script
      ```
 
-2. **Process all compositions in a directory:**
+<!-- 2. **Process all compositions in a directory:**
 
    - Specify the directory path containing the compositions as a command-line argument:
      ```
      python process_all_compositions.py path/to/directory
-     ```
+     ``` -->
 
 3. **View the results:**
    - The script will print the results for each composition in the specified directory.
