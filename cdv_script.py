@@ -6,7 +6,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk import pos_tag
 from termcolor import colored
-from nltk.collocations import *
+from nltk.collocations import BigramCollocationFinder
 
 # Download necessary NLTK data
 nltk.download('punkt')
