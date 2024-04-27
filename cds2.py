@@ -233,8 +233,6 @@ def process_all_compositions(directory_path):
 
 
 # Example usage
-directory_path = "/Users/africodeacademy/Downloads/victolyn/last6compositions"
-# directory_path = "/Users/africodeacademy/Downloads/compositionsforvictolyne"  # Replace with the path to your compositions
-# directory_path = "/Users/africodeacademy/Downloads/victolynes17remainingcompositions"
-# directory_path = "/Users/africodeacademy/Downloads/5lastcompositions"
+directory_path = "/path/to/your/file(s)"
+
 process_all_compositions(directory_path)
