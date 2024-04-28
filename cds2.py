@@ -36,8 +36,14 @@ repetition_pattern = r'\b(\w+)\s+\1\b'  # Exact repetition
 
 # Function to count occurrences of each pattern and return the actual words
 def count_pattern(text, pattern):
-    found = re.findall(pattern, text)
-    return len(found), found
+  found = re.findall(pattern, text)
+  word_counts = {}
+  for word in found:
+    if word in word_counts:
+      word_counts[word] += 1
+    else:
+      word_counts[word] = 1
+  return word_counts
 
 # Function to count nouns using NLTK's POS tagger
 def count_nouns(text):
@@ -172,15 +178,17 @@ def process_composition(file_path):
     }
 
     # Initialize dictionary to store counts and words for each pattern
-    results = {pattern_name: {"Count": 0, "Words": [], "Counts": []} for pattern_name in patterns_functions.keys()}
+    results = {pattern_name: {"Count": 0, "Words": [], "Word Frequencies": {}} for pattern_name in patterns_functions.keys()}
+    total_pattern_count = 0  # Initialize a variable to store total count
 
     # Process each pattern
     for pattern_name, pattern in patterns_functions.items():
         if pattern:
-            count, words = count_pattern(text, pattern)
-            results[pattern_name]["Count"] = count
-            results[pattern_name]["Words"] = words
-            results[pattern_name]["Counts"] = [1] * len(words)  # Initialize counts to 1
+            word_counts = count_pattern(text, pattern)  # Use modified function
+            total_pattern_count = sum(word_counts.values())  # Update total count
+            results[pattern_name]["Count"] = total_pattern_count
+            results[pattern_name]["Words"] = list(word_counts.keys())
+            results[pattern_name]["Word Frequencies"] = word_counts
 
     # Count nouns separately
     nouns_count, nouns = count_nouns(text)
@@ -197,9 +205,9 @@ def process_composition(file_path):
     for pattern_name, data in results.items():
         doc_results[pattern_name + " Count"] = data["Count"]
         # Create a dictionary to store the count of each word
-        word_count_dict = {word: count for word, count in zip(data["Words"], data["Counts"])}
+        # word_count_dict = {word: count for word, count in zip(data["Words"], data["Counts"])}
         # Join words and counts for words occurring more than once
-        words_with_counts = [f"{word}({count})" if count > 1 else word for word, count in word_count_dict.items()]
+        words_with_counts = [f"{word}({count})" if count > 1 else word for word, count in data["Word Frequencies"].items()]
         doc_results[pattern_name + " Words"] = ", ".join(words_with_counts)
 
     return doc_results
@@ -229,10 +237,6 @@ def process_all_compositions(directory_path):
     print(f"Results exported to {excel_file_path}")
 
 
-
-
-
 # Example usage
-directory_path = "/path/to/your/file(s)"
-
+directory_path = "/path/to-folder-with-files/"
 process_all_compositions(directory_path)
