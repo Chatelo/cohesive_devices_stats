@@ -238,5 +238,5 @@ def process_all_compositions(directory_path):
 
 
 # Example usage
-directory_path = "/path/to-folder-with-files/"
+directory_path = "/path/to/your/file(s)-directory/"
 process_all_compositions(directory_path)
