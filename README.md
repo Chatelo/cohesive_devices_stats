@@ -1,18 +1,19 @@
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
 This script is designed to process and analyze compositions in Microsoft Word (.docx) format. It utilizes various Natural Language Processing (NLP) techniques to extract and categorize cohesive devices, repetitions, substitutions, ellipses, and reiterations within the text. The script also identifies and categorizes synonyms, antonyms, hyponyms, and meronyms for repeated words. Additionally, it finds and counts collocations in the text.
+It is designed to analyze text documents, specifically looking for patterns and structures that are common in cohesive texts. It's a powerful tool for educators, researchers, and anyone interested in understanding the linguistic features of texts. The script is written in Python and uses several libraries to perform its tasks. Here's a step-by-step guide on how it works:
 
 ## Installation
 
+Before running this script, you need to have Python installed on your computer, you may [download here] (https://www.python.org/downloads/).
 To install and run this script, follow these steps:
 
 1. **Create a virtual environment (optional but recommended):**
