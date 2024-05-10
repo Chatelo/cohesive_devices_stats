@@ -13,7 +13,7 @@ It is designed to analyze text documents, specifically looking for patterns and 
 
 ## Installation
 
-Before running the script, you need to have Python installed on your computer,you may [download here](https://www.python.org/downloads/){:target="_blank"}.
+Before running the script, you need to have Python installed on your computer,you may <a href="https://www.python.org/downloads/" target="_blank">download here</a>.
 To install and run this script, follow these steps:
 
 1. **Create a virtual environment (optional but recommended):**
